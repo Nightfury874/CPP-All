@@ -38,64 +38,95 @@
 // Arrays with pointer
 
 
+// # include <iostream>
+
+// using namespace std;
+
+// int getMin(int arr[] , int size)
+// {
+//       int min = arr [0];
+//       for ( int i =0 ; i<size; i++)
+//       {
+//           if (arr[i]< min){
+//               min = arr [i] ;
+//           }
+//       }
+
+//       return min;
+
+// }
+// int getMax (int arr[], int size)
+// {
+//     int max = 0;
+//     for (int i = 0; i<size ; i++)
+//     {
+//         if( arr[i] > max)
+//         {
+//             max = arr [i];
+//         }
+//     }
+//     return max;
+// }
+
+// void getMinMax (int arr[], int size, int* min, int* max )
+// {
+//     for (int i = 0; i<size ; i++)
+//     {
+//         if( arr[i] > *max)
+//         {
+//             *max = arr [i];
+//         }
+//     }
+//     for (int i = 0; i<size ; i++)
+//     {
+//         if( arr[i] < *min)
+//         {
+//             *min = arr [i];
+//         }
+//     }
+// }
+// int main ()
+// {
+//     int arr[5]= {2,8,5,7,6} ;
+//     cout << " min element is " << getMin(arr, 5) << endl;
+//     cout << " max element is " << getMax(arr, 5) << endl ;
+
+//     int min = arr[0];
+//     int max = arr[0];
+//     getMinMax (arr, 5, &min, &max);
+
+//     cout << "The max number is " << max << " and min number is " << min << endl;
+
+//     return 0;
+// }
+
+
+// Dynamic allocation of arrays 
 # include <iostream>
 
 using namespace std;
 
-int getMin(int arr[] , int size)
+int main()
 {
-      int min = arr [0];
-      for ( int i =0 ; i<size; i++)
-      {
-          if (arr[i]< min){
-              min = arr [i] ;
-          }
-      }
+    int size ; 
+    cout << " enter size of array" << endl ;
+    cin >> size ;
 
-      return min;
+    int* arr = new int [size];
 
-}
-int getMax (int arr[], int size)
-{
-    int max = 0;
-    for (int i = 0; i<size ; i++)
+    for (int i = 0; i< size ; i++)
     {
-        if( arr[i] > max)
-        {
-            max = arr [i];
-        }
-    }
-    return max;
-}
+        cout << " enter array elements: " << endl;
+        cin >> arr[i];
 
-void getMinMax (int arr[], int size, int* min, int* max )
-{
-    for (int i = 0; i<size ; i++)
+    } 
+    for (int i = 0; i< size ; i++)
     {
-        if( arr[i] > *max)
-        {
-            *max = arr [i];
-        }
-    }
-    for (int i = 0; i<size ; i++)
-    {
-        if( arr[i] < *min)
-        {
-            *min = arr [i];
-        }
-    }
-}
-int main ()
-{
-    int arr[5]= {2,8,5,7,6} ;
-    cout << " min element is " << getMin(arr, 5) << endl;
-    cout << " max element is " << getMax(arr, 5) << endl ;
+        // cout <<  arr[i]; 
+        cout << *(arr +i) << "   " ;
 
-    int min = arr[0];
-    int max = arr[0];
-    getMinMax (arr, 5, &min, &max);
+      
+    } 
+    return 0; 
 
-    cout << "The max number is " << max << " and min number is " << min << endl;
-
-    return 0;
 }
