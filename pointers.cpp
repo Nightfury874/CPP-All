@@ -102,31 +102,33 @@
 
 
 // Dynamic allocation of arrays 
-# include <iostream>
+// # include <iostream>
 
-using namespace std;
+// using namespace std;
 
-int main()
-{
-    int size ; 
-    cout << " enter size of array" << endl ;
-    cin >> size ;
+// int main()
+// {
+//     int size ; 
+//     cout << " enter size of array" << endl ;
+//     cin >> size ;
 
-    int* arr = new int [size];
+//     int* arr = new int [size];
 
-    for (int i = 0; i< size ; i++)
-    {
-        cout << " enter array elements: " << endl;
-        cin >> arr[i];
+//     for (int i = 0; i< size ; i++)
+//     {
+//         cout << " enter array elements: " << endl;
+//         cin >> arr[i];
 
-    } 
-    for (int i = 0; i< size ; i++)
-    {
-        // cout <<  arr[i]; 
-        cout << *(arr +i) << "   " ;
+//     } 
+//     for (int i = 0; i< size ; i++)
+//     {
+//         // cout <<  arr[i]; 
+//         cout << *(arr +i) << "   " ;
 
       
-    } 
-    return 0; 
+//     } 
+//     return 0; 
 
-}
+// // }
+
+// ** Multidimensional dynamic array
