@@ -132,3 +132,19 @@
 // // }
 
 // ** Multidimensional dynamic array
+
+// Function pointers;
+
+# include <iostream>
+ using namespace std;
+ int getNum()
+ {
+     return 5;
+ }
+ int main()
+ {
+     int (*FuncPtr)() = getNum ;
+
+     cout << FuncPtr() ; 
+
+ }
