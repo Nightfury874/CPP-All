@@ -135,18 +135,42 @@
 
 // Function pointers;
 
-# include <iostream>
- using namespace std;
-//  int getNum()
+// # include <iostream>
+//  using namespace std;
+// //  int getNum()
+// //  {
+// //      return 5;
+// //  }
+//  int main()
 //  {
-//      return 5;
+//     // int (*FuncPtr)() = getNum ;
+
+//     //  cout << FuncPtr() ;  
+//     cout << 23%2 ;
+//     return 0;
+
 //  }
- int main()
- {
-    // int (*FuncPtr)() = getNum ;
 
-    //  cout << FuncPtr() ;  
-    cout << 11%2 ;
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+   
+   int size;
+   cin >> size ;
+   int *arr =  new int[size] ;
+   for ( int i = 0; i<size ; i++)
+   {
+       cin >> arr[i];
+   } 
+   for (int i = size-1 ; i >=0 ; i--)
+   {
+       cout <<arr[i];
+   }
     return 0;
-
- }
+}
