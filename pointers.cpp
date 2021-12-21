@@ -137,14 +137,16 @@
 
 # include <iostream>
  using namespace std;
- int getNum()
- {
-     return 5;
- }
+//  int getNum()
+//  {
+//      return 5;
+//  }
  int main()
  {
-     int (*FuncPtr)() = getNum ;
+    // int (*FuncPtr)() = getNum ;
 
-     cout << FuncPtr() ; 
+    //  cout << FuncPtr() ;  
+    cout << 11%2 ;
+    return 0;
 
  }
