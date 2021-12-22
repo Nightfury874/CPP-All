@@ -1,7 +1,7 @@
-# include <iostream>
-# include <vector>
+// # include <iostream>
+// # include <vector>
 
-using namespace std;
+// using namespace std;
 
 // int main()
 // {
@@ -41,22 +41,33 @@ using namespace std;
 //     return 0;
 // }
 
-int main()
-{
-    vector<int>n;
-    int a;
+#include <sstream>
+#include <vector>
+#include <iostream>
+using namespace std;
 
-    for (int i = 0 ; i< 5 ; i++)
+vector<int> parseInts(string str) {
+	// Complete this function
+    stringstream ss(str);
+    vector <int> result;
+    char ch;
+    int tmp;
+    while (ss >>tmp)
     {
-        cin >> a;
-        n.push_back(a);
+        result.push_back(tmp);
+        ss >>ch;
+        return result;
     }
-    for ( auto a = n.begin(); a != n.end(); a++ )
-    {
-        cout<<" the elements are " << *a << endl;
+    
+}
 
-        // comment
-        
+int main() {
+    string str;
+    cin >> str;
+    vector<int> integers = parseInts(str);
+    for(int i = 0; i < integers.size(); i++) {
+        cout << integers[i] << "\n";
     }
+    
     return 0;
 }
