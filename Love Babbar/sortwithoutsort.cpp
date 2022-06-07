@@ -1,46 +1,46 @@
-#include<iostream>  
-using namespace std;  
-void sort_array_0_1_2( int A[ ] , int n )    
-{  
-    int i = 0 ,  countzero = 0 , countone = 0 ,  counttwo = 0 ;  
-    while ( i < n )  
-    {  
-        if ( A [ i ] == 0 )  
-        {  
-            countzero = countzero + 1 ;  
-        }  
-        else if ( A [ i ] == 1 )  
-        {  
-            countone = countone + 1 ;  
-        }  
-        else  
-        {  
-            counttwo = counttwo + 2 ;  
-        }  
-        i = i + 1 ;  
-    }  
-    for  ( i = 0 ; i < countzero ; i++ )  
-    {  
-        A [ i ] = 0 ;  
-    }  
-    for ( i = countzero ; i < countzero + countone ; i++ )  
-    {  
-        A [ i ] = 1 ;  
-    }  
-            for ( i = countzero + countone ; i < n ; i++ )  
-    {  
-        A [ i ] = 2 ;  
-    }  
-}  
-int main()  
-{  
-    int  i ,  A[ 100 ] , n ;  
-    A[100] = {0,2,1,2,1,2,1,2,0,0,1,0,0,1,2,0,1,0,0,2,0,2,1};
-    sort_array_0_1_2 ( A , n ) ;  
-    for ( i = 0 ; i < n ; i++ )  
-    {  
-        cout <<  A  [  i  ] << endl ;  
-    }  
-    return 0;  
-      
-}  
+# include <bits/stdc++.h>
+using namespace std;
+
+int sortarr(int arr[], int n){
+    int count1 = 0, count0=0, count2=0;
+
+    for (int i = 0; i<n; i++){
+        if (arr[i]==1){
+            count1++;
+        }
+        if (arr[i]==0){
+            count0++;
+        }
+        if (arr[i]==2){
+            count2++;
+        }
+    }
+   // cout<<count0<<" "<<count1<< " "<<count2<<" "<<endl;
+    for(int i = 0; i<count0;i++){
+        arr[i] = 0;
+    }
+    int y = count0-1;
+    for (int i = y; i<count1; i++){
+        arr[i] = 1;
+    }
+    int x = count0 + count1;
+    for (int i =x; i<n; i++) {
+        arr[i]= 2;
+    }
+    return 0;
+
+}
+int main(){
+    int arr[] = {0,2,0,1,0,1,2,0,2,0,2,1,2,0,2};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    for (int i = 0; i<n; i++){
+        cout << arr[i]<<" "<<endl;
+        
+    }
+    
+    sortarr(arr,n);
+    for (int i = 0; i<n; i++){
+        cout << arr[i]<<" ";
+    }
+    return 0;
+}
