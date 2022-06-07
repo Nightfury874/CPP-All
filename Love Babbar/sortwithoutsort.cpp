@@ -21,19 +21,19 @@ int sortarr(int arr[], int n){
     for(int i = 0; i<count0;i++){
         arr[i] = 0;
     }
-    int y = count0-1;
-    for (int i = y; i<count1; i++){
+    int y = count0;
+    for (int i = y; i<count0+ count1; i++){
         arr[i] = 1;
     }
     int x = count0 + count1;
-    for (int i =x; i<n; i++) {
+    for (int i =x; i<count0 + count1+count2; i++) {
         arr[i]= 2;
     }
     return 0;
 
 }
 int main(){
-    int arr[] = {0,2,0,1,0,1,2,0,2,0,2,1,2,0,2};
+    int arr[] = {0,2,0,1,0,1,1,0,1,0,1,1,2,0,2};
     int n = sizeof(arr)/sizeof(arr[0]);
     for (int i = 0; i<n; i++){
         cout << arr[i]<<" "<<endl;

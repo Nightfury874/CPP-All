@@ -1,5 +1,5 @@
 //Move all the negative elements to one side of the array
-
+// Naive approach
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
