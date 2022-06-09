@@ -24,5 +24,6 @@ int main (){
     int ans = min(arr,n,k);
     cout<<ans<<" ";
     return 0;
-    //chang
+    //chan
+    
 }
